@@ -20,10 +20,20 @@ def sole_trader():
     net_income_excl_super = weekly_rate - income_tax - net_gst_payable - medicare_levy
 
     return {
-        "Category": ["Annual Income", "Income Tax", "Superannuation", "Medicare Levy", "Net GST Payable",
-                     "Net Income incl. Super & GST", "Net Income excl. Super & GST"],
-        "Sole Trader": [f"${weekly_rate:.2f}", f"${income_tax:.2f}", f"${superannuation:.2f}", f"${medicare_levy:.2f}",
-                        f"${net_gst_payable:.2f}", f"${net_income_incl_super:.2f}", f"${net_income_excl_super:.2f}"]
+        "Category": ["Annual Income",
+                     "Income Tax",
+                     "Superannuation",
+                     "Medicare Levy",
+                     "Net GST Payable",
+                     "Net Income incl. Super & GST",
+                     "Net Income excl. Super & GST"],
+        "Sole Trader": [f"${weekly_rate:.2f}",
+                        f"${income_tax:.2f}",
+                        f"${superannuation:.2f}",
+                        f"${medicare_levy:.2f}",
+                        f"${net_gst_payable:.2f}",
+                        f"${net_income_incl_super:.2f}",
+                        f"${net_income_excl_super:.2f}"]
     }
 
 
@@ -36,9 +46,18 @@ def permanent_employee():
     net_income_excl_super_employee = salary - income_tax_employee + superannuation_employee - medicare_levy_employee
 
     return {
-        "Category": ["Annual Income", "Income Tax", "Superannuation", "Medicare Levy", "Net GST Payable",
-                     "Net Income incl. Super & GST", "Net Income excl. Super & GST"],
-        "Permanent Employee": [f"${salary:.2f}", f"${income_tax_employee:.2f}", f"${superannuation_employee:.2f}",
-                               f"${medicare_levy_employee:.2f}", "N/A", f"${net_income_incl_super_employee:.2f}",
+        "Category": ["Annual Income",
+                     "Income Tax",
+                     "Superannuation",
+                     "Medicare Levy",
+                     "Net GST Payable",
+                     "Net Income incl. Super & GST",
+                     "Net Income excl. Super & GST"],
+        "Permanent Employee": [f"${salary:.2f}",
+                               f"${income_tax_employee:.2f}",
+                               f"${superannuation_employee:.2f}",
+                               f"${medicare_levy_employee:.2f}",
+                               "N/A",
+                               f"${net_income_incl_super_employee:.2f}",
                                f"${net_income_excl_super_employee:.2f}"]
     }
