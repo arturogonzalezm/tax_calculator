@@ -6,8 +6,8 @@ tax_strategy = DefaultTaxStrategy(tax_brackets)
 super_strategy = FixedSuperStrategy(super_rate)
 
 
-def sole_trader():
-    daily_rate = 1000
+def sole_trader(daily_rate):
+    # daily_rate = 1000
     weekly_rate = daily_rate * 5 * 52
     income_tax = tax_strategy.calculate_tax(weekly_rate)
     superannuation = super_strategy.calculate_super(weekly_rate)
@@ -37,8 +37,8 @@ def sole_trader():
     }
 
 
-def permanent_employee():
-    salary = 180000
+def permanent_employee(salary):
+    # salary = 180000
     income_tax_employee = tax_strategy.calculate_tax(salary)
     superannuation_employee = super_strategy.calculate_super(salary)
     medicare_levy_employee = calculate_medicare_levy(salary)
